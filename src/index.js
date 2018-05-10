@@ -404,6 +404,8 @@ class Offline {
           // Cf AWS API GW payload limits.
           routeConfig.payload = { parse: false, maxBytes: 1024 * 1024 * 10 };
         }
+        
+        console.log(`[SLS] funOptions: ${JSON.stringify(funOptions)}`);
 
         this.server.route({
           method: routeMethod,
