@@ -413,6 +413,7 @@ class Offline {
             // Payload processing
             const encoding = utils.detectEncoding(request);
 
+            console.log(`[SLS] RouteConfig: ${JSON.stringify(routeConfig)}`);
             request.payload = request.payload && request.payload.toString(encoding);
             request.rawPayload = request.payload;
 
