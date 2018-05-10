@@ -12,7 +12,7 @@ module.exports = function createLambdaProxyContext(request, options, stageVariab
   const authContext = (request.auth && request.auth.credentials && request.auth.credentials.context) || {};
 
   let body = request.payload;
-  console.log(`[SLS] Request: ${JSON.stringify(request)}`);
+  console.log(`[SLS] Request.payload: ${JSON.stringify(request.payload)}`);
   console.log(`[SLS] Options: ${JSON.stringify(options)}`);
   console.log(`[SLS] StageVariables: ${JSON.stringify(stageVariables)}`);
 
